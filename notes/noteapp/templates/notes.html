@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/notes.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/borrar.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <h1>¡Hola {{ name }}! Aquí están tus notas:</h1>
+    <ul class='notes'>
+        {% for note in notes %}
+        <li>
+            <div class="note">
+                <h3>{{note.title}}</h3>
+                <p>{{note.content}}</p>
+                <p class='fecha'>{{note.time}}</p>
+            </div>
+            <div class="delcha"><a href="{{id}}/mod/{{note.id}}" class="del"><span>modificar nota</span></a><a href="{{id}}/borrar/{{note.id}}" class="del"><span>borrar nota</span></a></div>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href='/createnote/{{id}}' title="crear nota nueva"><button><div class="cross"><div class="h"></div><div class="v"></div></div></button></a>
+    {% if note %} <div class="borrar"><div class="q"><h1>¿Quieres borrar la nota "{{note.title}}"?</h1><div class="opts"><a href="/home/{{id}}"><span>cancelar</span></a><a href="/home/{{id}}/borrar/{{note.id}}/conf"><span>aceptar</span></a></div></div></div> {% endif %}
+</body>
+</html>

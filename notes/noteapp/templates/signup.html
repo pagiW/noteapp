@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/signup.css' %}">
+    <title>Registrarse</title>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input placeholder="Nombre de usuario"type="text" name="name" id="name" required>
+        <input placeholder="Contraseña" type="password" name="password" id="password" required>
+        <input placeholder="Correo electronico" type="email" name="email" id="email" required>
+        <input type="submit" class='sub' value="Registrarse">
+    </form>
+</body>
+</html>

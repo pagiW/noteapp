@@ -1,0 +1,88 @@
+.borrar {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.486);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.borrar h1, .borrar a {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.del {
+    position: relative;
+    top: 5px;
+    left: 0;
+    margin: 0;
+    width: initial;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.delcha {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+.del span {
+    padding: 5px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 100px;
+}
+
+.q {
+    border-radius: 15px;
+    width: 75%;
+    border: 5px solid black;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.note {
+    width: initial;
+}
+.notes li {
+    width: 85%;
+}
+
+.opts {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+a {
+    top: 45px;
+}
+
+.opts span {
+    border: 3px solid black;
+    border-radius: 100px;
+    text-align: center;
+    padding: 15px;
+    color: black;
+}
+
+.opts a {
+    text-decoration: none;
+    font-weight: bold;
+}
